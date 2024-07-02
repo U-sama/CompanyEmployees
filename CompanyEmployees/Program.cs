@@ -10,6 +10,7 @@ builder.Services.ConfigureCors();
 builder.Services.ConfigureIISIntegration();
 builder.Services.ConfigureLogerService();
 builder.Services.ConfigureRepositoryManager();
+builder.Services.ConfigureServiceManger();
 
 builder.Services.AddControllers();
 
