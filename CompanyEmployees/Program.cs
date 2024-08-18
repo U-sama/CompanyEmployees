@@ -11,6 +11,7 @@ builder.Services.ConfigureIISIntegration();
 builder.Services.ConfigureLogerService();
 builder.Services.ConfigureRepositoryManager();
 builder.Services.ConfigureServiceManger();
+builder.Services.ConfigureSqlContext(builder.Configuration);
 
 builder.Services.AddControllers();
 
