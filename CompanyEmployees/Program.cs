@@ -12,6 +12,7 @@ builder.Services.ConfigureLogerService();
 builder.Services.ConfigureRepositoryManager();
 builder.Services.ConfigureServiceManger();
 builder.Services.ConfigureSqlContext(builder.Configuration);
+builder.Services.AddAutoMapper(typeof(Program));
 
 builder.Services.AddControllers()
     .AddApplicationPart(typeof(CompanyEmployees.Presentation.AssemblyReference).Assembly);
@@ -37,6 +38,6 @@ app.UseCors("CorsPolicy");
 
 app.UseAuthorization();
 
-app.MapControllers();
+app.MapControllers(); // app.MapControllers method, which adds endpoints for controller actions without specifying any routes.
 
 app.Run();
