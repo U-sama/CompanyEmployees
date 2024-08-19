@@ -19,8 +19,8 @@ namespace Repository
                     .AsNoTracking() :
                 RepositoryContext.Set<T>();
 
-        public IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression, bool trachChanges) =>
-            !trachChanges ?
+        public IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression, bool trackChanges) =>
+            !trackChanges ?
                 RepositoryContext.Set<T>()
                     .Where(expression)
                     .AsNoTracking() :
